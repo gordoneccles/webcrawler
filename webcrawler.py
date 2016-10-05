@@ -65,6 +65,8 @@ def spider(url, word, maxPages):
 
     f.write('\n\n')
     f.write("Total instances of the word \"{0}\": {1}\n".format(word, str(totalWordCount)))
-    f.write("Page hit percentage: {0}\n".format(str(float(pageHitCount) / maxPages * 10)))
+    f.write("Page hit percentage: {0}\n".format(str(float(pageHitCount) / maxPages * 100)))
     f.write("Average hits for hit pages: {0}\n".format(str(totalWordCount / pageHitCount)))
     f.close()
+
+spider('http://www.vox.com', 'Hillary', 100)
